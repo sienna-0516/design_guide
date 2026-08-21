@@ -1,0 +1,310 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "design-canvas.jsx",
+              "slide_template/**",
+              "ui_kits/website/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Poppins|Inter|Freesentation|Noto Sans KR|Michroma))/i]",
+        "message": "Font not provided by the design system. Available: Poppins, Inter, Freesentation, Noto Sans KR, Michroma."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Nav'] > JSXAttribute > JSXIdentifier[name!=/^(?:active|key|ref|className|style|children)$/]",
+        "message": "<Nav> doesn't accept that prop. Declared props: active."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "CTA": {
+        "replaces": []
+      },
+      "Features": {
+        "replaces": []
+      },
+      "Footer": {
+        "replaces": []
+      },
+      "Hero": {
+        "replaces": []
+      },
+      "Nav": {
+        "replaces": []
+      },
+      "SpecBand": {
+        "replaces": []
+      },
+      "Stats": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--baro-black",
+      "--baro-white",
+      "--baro-yellow",
+      "--bg-app",
+      "--bg-inverse",
+      "--bg-surface",
+      "--bg-surface-2",
+      "--border-1",
+      "--border-2",
+      "--border-strong",
+      "--caption-lh",
+      "--caption-size",
+      "--card-shadow",
+      "--card-shadow-hover",
+      "--dur-1",
+      "--dur-2",
+      "--dur-3",
+      "--dur-4",
+      "--ease-spring",
+      "--ease-standard",
+      "--fg-1",
+      "--fg-2",
+      "--fg-3",
+      "--fg-inverse",
+      "--font-display",
+      "--font-kr",
+      "--font-mono",
+      "--font-sans",
+      "--gradient-aqua",
+      "--gradient-dawn",
+      "--gradient-yellow",
+      "--grey",
+      "--grey-d-100",
+      "--grey-d-200",
+      "--grey-d-300",
+      "--grey-l-100",
+      "--grey-l-200",
+      "--grey-l-300",
+      "--h1-lh",
+      "--h1-size",
+      "--h1-tracking",
+      "--h1-weight",
+      "--h2-lh",
+      "--h2-size",
+      "--h2-tracking",
+      "--h2-weight",
+      "--h3-lh",
+      "--h3-size",
+      "--h3-tracking",
+      "--h3-weight",
+      "--h4-lh",
+      "--h4-size",
+      "--h4-tracking",
+      "--h4-weight",
+      "--h5-lh",
+      "--h5-size",
+      "--h5-tracking",
+      "--h5-weight",
+      "--hairline",
+      "--hairline-soft",
+      "--nav-bg",
+      "--outline-strong",
+      "--p-l-lh",
+      "--p-l-size",
+      "--p-m-lh",
+      "--p-m-size",
+      "--p-s-lh",
+      "--p-s-size",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--semantic-blue-1",
+      "--semantic-blue-2",
+      "--semantic-negative-1",
+      "--semantic-negative-2",
+      "--semantic-positive",
+      "--semantic-purple",
+      "--shadow-btn",
+      "--shadow-card",
+      "--shadow-glow-y",
+      "--shadow-hover",
+      "--sp-1",
+      "--sp-10",
+      "--sp-11",
+      "--sp-12",
+      "--sp-2",
+      "--sp-3",
+      "--sp-4",
+      "--sp-5",
+      "--sp-6",
+      "--sp-7",
+      "--sp-8",
+      "--sp-9",
+      "--surface-band",
+      "--surface-deep",
+      "--surface-page",
+      "--surface-raised",
+      "--text-1",
+      "--text-2",
+      "--text-3",
+      "--text-4",
+      "--yellow-d-100",
+      "--yellow-d-200",
+      "--yellow-d-300",
+      "--yellow-l-100",
+      "--yellow-l-200",
+      "--yellow-l-300"
+    ],
+    "tokenKinds": {
+      "--baro-yellow": "color",
+      "--baro-black": "color",
+      "--baro-white": "color",
+      "--yellow-d-300": "color",
+      "--yellow-d-200": "color",
+      "--yellow-d-100": "color",
+      "--yellow-l-100": "color",
+      "--yellow-l-200": "color",
+      "--yellow-l-300": "color",
+      "--grey-d-300": "color",
+      "--grey-d-200": "color",
+      "--grey-d-100": "color",
+      "--grey": "color",
+      "--grey-l-100": "color",
+      "--grey-l-200": "color",
+      "--grey-l-300": "color",
+      "--semantic-positive": "color",
+      "--semantic-negative-1": "color",
+      "--semantic-negative-2": "color",
+      "--semantic-blue-1": "color",
+      "--semantic-blue-2": "color",
+      "--semantic-purple": "color",
+      "--gradient-aqua": "color",
+      "--gradient-dawn": "color",
+      "--gradient-yellow": "color",
+      "--bg-app": "color",
+      "--bg-surface": "color",
+      "--bg-surface-2": "color",
+      "--bg-inverse": "color",
+      "--fg-1": "color",
+      "--fg-2": "color",
+      "--fg-3": "color",
+      "--fg-inverse": "color",
+      "--border-1": "color",
+      "--border-2": "color",
+      "--border-strong": "color",
+      "--font-display": "font",
+      "--font-sans": "font",
+      "--font-kr": "font",
+      "--font-mono": "font",
+      "--h1-size": "spacing",
+      "--h1-weight": "font",
+      "--h1-lh": "font",
+      "--h1-tracking": "font",
+      "--h2-size": "spacing",
+      "--h2-weight": "font",
+      "--h2-lh": "font",
+      "--h2-tracking": "font",
+      "--h3-size": "spacing",
+      "--h3-weight": "font",
+      "--h3-lh": "font",
+      "--h3-tracking": "font",
+      "--h4-size": "spacing",
+      "--h4-weight": "font",
+      "--h4-lh": "font",
+      "--h4-tracking": "font",
+      "--h5-size": "spacing",
+      "--h5-weight": "font",
+      "--h5-lh": "font",
+      "--h5-tracking": "font",
+      "--p-l-size": "spacing",
+      "--p-l-lh": "font",
+      "--p-m-size": "spacing",
+      "--p-m-lh": "font",
+      "--p-s-size": "spacing",
+      "--p-s-lh": "font",
+      "--caption-size": "spacing",
+      "--caption-lh": "font",
+      "--sp-1": "spacing",
+      "--sp-2": "spacing",
+      "--sp-3": "spacing",
+      "--sp-4": "spacing",
+      "--sp-5": "spacing",
+      "--sp-6": "spacing",
+      "--sp-7": "spacing",
+      "--sp-8": "spacing",
+      "--sp-9": "spacing",
+      "--sp-10": "spacing",
+      "--sp-11": "spacing",
+      "--sp-12": "spacing",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-pill": "radius",
+      "--shadow-btn": "shadow",
+      "--shadow-card": "shadow",
+      "--shadow-hover": "shadow",
+      "--shadow-glow-y": "shadow",
+      "--ease-standard": "other",
+      "--ease-spring": "other",
+      "--dur-1": "other",
+      "--dur-2": "other",
+      "--dur-3": "other",
+      "--dur-4": "other",
+      "--surface-page": "color",
+      "--surface-deep": "color",
+      "--surface-band": "color",
+      "--surface-raised": "color",
+      "--text-1": "font",
+      "--text-2": "font",
+      "--text-3": "font",
+      "--text-4": "font",
+      "--hairline": "color",
+      "--hairline-soft": "color",
+      "--outline-strong": "color",
+      "--nav-bg": "color",
+      "--card-shadow": "shadow",
+      "--card-shadow-hover": "shadow"
+    },
+    "fontFamilies": [
+      "Freesentation",
+      "Inter",
+      "Michroma",
+      "Noto Sans KR",
+      "Poppins"
+    ]
+  }
+}

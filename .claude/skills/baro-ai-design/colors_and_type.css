@@ -1,0 +1,200 @@
+/* ==========================================================================
+   BARO AI — Colors & Type
+   ==========================================================================
+   Brand: Bold & sharp. Vibrant BARO Yellow punctuates dark metallic blacks
+   and a deliberately warm-biased neutral scale. Built for AI/liquid-cooling
+   infrastructure — confident, sophisticated, trustworthy.
+   ========================================================================== */
+
+/* ---------- Fonts --------------------------------------------------------- */
+/* Primary English display: Poppins (Bold/Light)
+   Body / UI: Inter
+   Korean: Freesentation — a Korean sans designed to pair with Latin grotesques.
+   No tracking offset on Korean headings (use the type's natural metrics).
+   Note: Figma spec also references "Gilroy" for the wordmark; Gilroy is
+   proprietary and not provided — we substitute Poppins Bold for Gilroy Bold
+   and Poppins Light for Gilroy Light. FLAG: request Gilroy .otf from client. */
+
+@font-face { font-family: "Poppins"; font-weight: 300; src: url("./fonts/Poppins-Light.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 400; src: url("./fonts/Poppins-Regular.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 500; src: url("./fonts/Poppins-Medium.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 600; src: url("./fonts/Poppins-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 700; src: url("./fonts/Poppins-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 800; src: url("./fonts/Poppins-ExtraBold.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 900; src: url("./fonts/Poppins-Black.ttf") format("truetype"); }
+
+@font-face { font-family: "Inter"; font-weight: 300; src: url("./fonts/Inter-Light.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; font-weight: 400; src: url("./fonts/Inter-Regular.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; font-weight: 500; src: url("./fonts/Inter-Medium.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url("./fonts/Inter-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url("./fonts/Inter-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; font-weight: 900; src: url("./fonts/Inter-Black.ttf") format("truetype"); }
+
+@font-face { font-family: "Freesentation"; font-weight: 300; src: url("./fonts/Freesentation-3Light.ttf") format("truetype"); }
+@font-face { font-family: "Freesentation"; font-weight: 400; src: url("./fonts/Freesentation-4Regular.ttf") format("truetype"); }
+@font-face { font-family: "Freesentation"; font-weight: 500; src: url("./fonts/Freesentation-5Medium.ttf") format("truetype"); }
+@font-face { font-family: "Freesentation"; font-weight: 600; src: url("./fonts/Freesentation-6SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Freesentation"; font-weight: 700; src: url("./fonts/Freesentation-7Bold.ttf") format("truetype"); }
+@font-face { font-family: "Freesentation"; font-weight: 800; src: url("./fonts/Freesentation-8ExtraBold.ttf") format("truetype"); }
+@font-face { font-family: "Freesentation"; font-weight: 900; src: url("./fonts/Freesentation-9Black.ttf") format("truetype"); }
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Michroma&display=swap");
+
+:root {
+  /* ---------- Primary ---------------------------------------------------- */
+  --baro-yellow:        #FFDE2A;  /* Brand primary — 10-30% of any surface */
+  --baro-black:         #131313;  /* Brand black (not pure black) */
+  --baro-white:         #F9F9F9;  /* Brand white (not pure white) */
+
+  /* ---------- Yellow Variants ------------------------------------------- */
+  --yellow-d-300:       #FFA800;
+  --yellow-d-200:       #FFC200;
+  --yellow-d-100:       #FFD243;
+  --yellow-l-100:       #FFE65E;
+  --yellow-l-200:       #FFEE92;
+  --yellow-l-300:       #FFF7B1;
+
+  /* ---------- Greyscale (warm-biased dark metallic) --------------------- */
+  --grey-d-300:         #2B2B2B;  /* near-black, chips & surfaces */
+  --grey-d-200:         #393939;
+  --grey-d-100:         #4D4D4D;
+  --grey:               #656565;
+  --grey-l-100:         #B2B2B2;
+  --grey-l-200:         #D9D9D9;
+  --grey-l-300:         #F0F0F0;
+
+  /* ---------- Semantic --------------------------------------------------- */
+  --semantic-positive:  #22C678;
+  --semantic-negative-1:#C60909;
+  --semantic-negative-2:#EE8484;
+  --semantic-blue-1:    #2E92FF;
+  --semantic-blue-2:    #267AD6;
+  --semantic-purple:    #A23DF2;
+
+  /* ---------- Gradients -------------------------------------------------- */
+  --gradient-aqua:      linear-gradient(to right top, #3effb9, #1cfccb, #00f9db, #00f5e7, #2af1f1); /* @kind color */
+  --gradient-dawn:      linear-gradient(to right top, #64a7e6, #53bedc, #7ccec9, #b0d9be, #dce2c5); /* @kind color */
+  --gradient-yellow:    linear-gradient(to right top, #FFEB7C, #FFDE2A, #FFC329, #FFA800); /* @kind color */
+
+  /* ---------- Foreground / Background aliases --------------------------- */
+  --bg-app:             var(--baro-black);      /* default canvas */
+  --bg-surface:         var(--grey-d-300);      /* cards */
+  --bg-surface-2:       #414141;                /* raised surface */
+  --bg-inverse:         var(--baro-white);
+
+  --fg-1:               var(--baro-white);      /* primary text on dark */
+  --fg-2:               var(--grey-l-100);      /* secondary text */
+  --fg-3:               var(--grey);            /* tertiary / muted */
+  --fg-inverse:         var(--baro-black);      /* text on yellow/white */
+
+  --border-1:           rgba(255,255,255,0.12);
+  --border-2:           rgba(255,255,255,0.06);
+  --border-strong:      var(--grey);
+
+  /* ---------- Type families ---------------------------------------------
+     Language decides the face: Latin → Poppins (display) / Inter (body+UI);
+     한글 → always Freesentation. The stacks list the Latin face first and
+     Freesentation next, so in MIXED strings each script auto-maps to the
+     right font (Latin uses Poppins/Inter, Korean falls through to Freesentation). */
+  --font-display:       "Poppins", "Freesentation", "Inter", system-ui, sans-serif; /* Gilroy substitute */
+  --font-sans:          "Inter", "Freesentation", system-ui, sans-serif;
+  --font-kr:            "Freesentation", "Noto Sans KR", "Inter", system-ui, sans-serif;
+  --font-mono:          ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---------- Type scale (desktop) --------------------------------------
+     All headings tracked -1% on desktop, +1% on mobile (per Figma spec).
+     Korean headings track +3%. Line-heights & trackings tagged @kind font. */
+  --h1-size: 48px; --h1-weight: 700; --h1-lh: 1.0  /* @kind font */; --h1-tracking: -0.01em /* @kind font */;
+  --h2-size: 32px; --h2-weight: 700; --h2-lh: 1.0  /* @kind font */; --h2-tracking: -0.01em /* @kind font */;
+  --h3-size: 24px; --h3-weight: 700; --h3-lh: 1.1  /* @kind font */; --h3-tracking: -0.01em /* @kind font */;
+  --h4-size: 20px; --h4-weight: 700; --h4-lh: 1.2  /* @kind font */; --h4-tracking: -0.01em /* @kind font */;
+  --h5-size: 18px; --h5-weight: 600; --h5-lh: 1.3  /* @kind font */; --h5-tracking: -0.01em /* @kind font */;
+
+  --p-l-size: 16px; --p-l-lh: 1.5 /* @kind font */;
+  --p-m-size: 14px; --p-m-lh: 1.5 /* @kind font */;
+  --p-s-size: 13px; --p-s-lh: 1.5 /* @kind font */;
+  --caption-size: 12px; --caption-lh: 1.4 /* @kind font */;
+
+  /* ---------- Spacing (8px grid) ---------------------------------------- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 40px; --sp-8: 48px;
+  --sp-9: 64px; --sp-10: 80px; --sp-11: 96px; --sp-12: 120px;
+
+  /* ---------- Radii ------------------------------------------------------ */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadows ---------------------------------------------------- */
+  --shadow-btn:    0px 0px 4px 0px rgba(19,19,19,0.10);
+  --shadow-card:   0px 4px 16px 0px rgba(0,0,0,0.24);
+  --shadow-hover:  0px 8px 28px 0px rgba(0,0,0,0.40);
+  --shadow-glow-y: 0px 0px 24px 0px rgba(255,222,42,0.35);
+
+  /* ---------- Motion ----------------------------------------------------- */
+  --ease-standard: cubic-bezier(0.2, 0.6, 0.2, 1) /* @kind other */;
+  --ease-spring:   cubic-bezier(0.34, 1.3, 0.64, 1) /* @kind other */;
+  --dur-1: 120ms /* @kind other */; --dur-2: 200ms /* @kind other */; --dur-3: 320ms /* @kind other */; --dur-4: 500ms /* @kind other */;
+
+  /* ---------- Theme surfaces (default = DARK) ---------------------------
+     Semantic, theme-aware tokens. Flip the whole UI by setting
+     data-theme="light" on <html>. Brand yellow is constant across themes;
+     on light surfaces the logo lockup switches to the black + yellow-fill
+     form (see --logo-lockup, defined per page). */
+  --surface-page:    #131313;
+  --surface-deep:    #0A0A0A;
+  --surface-band:    #0E0E0E;
+  --surface-raised:  #1B1B1B;
+  --text-1:          #F9F9F9;
+  --text-2:          rgba(249,249,249,0.64);
+  --text-3:          rgba(249,249,249,0.50);
+  --text-4:          rgba(249,249,249,0.40);
+  --hairline:        rgba(255,255,255,0.08);
+  --hairline-soft:   rgba(255,255,255,0.06);
+  --outline-strong:  rgba(255,255,255,0.40);
+  --nav-bg:          rgba(19,19,19,0.55);
+  --card-shadow:       0 4px 16px rgba(0,0,0,0.24);
+  --card-shadow-hover: 0 8px 28px rgba(0,0,0,0.40);
+}
+
+/* ---------- Light theme override ---------------------------------------- */
+[data-theme="light"] {
+  --surface-page:    #F9F9F9;
+  --surface-deep:    #EDEDEA;
+  --surface-band:    #F0F0EE;
+  --surface-raised:  #FFFFFF;
+  --text-1:          #131313;
+  --text-2:          rgba(19,19,19,0.66);
+  --text-3:          rgba(19,19,19,0.52);
+  --text-4:          rgba(19,19,19,0.42);
+  --hairline:        rgba(19,19,19,0.12);
+  --hairline-soft:   rgba(19,19,19,0.08);
+  --outline-strong:  rgba(19,19,19,0.32);
+  --nav-bg:          rgba(249,249,249,0.72);
+  --card-shadow:       0 4px 16px rgba(19,19,19,0.08);
+  --card-shadow-hover: 0 10px 28px rgba(19,19,19,0.16);
+}
+
+/* =============================================================
+   Semantic type classes
+   ============================================================= */
+html, body {
+  background: var(--bg-app);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.h1, h1 { font-family: var(--font-display); font-size: var(--h1-size); font-weight: var(--h1-weight); line-height: var(--h1-lh); letter-spacing: var(--h1-tracking); }
+.h2, h2 { font-family: var(--font-display); font-size: var(--h2-size); font-weight: var(--h2-weight); line-height: var(--h2-lh); letter-spacing: var(--h2-tracking); }
+.h3, h3 { font-family: var(--font-display); font-size: var(--h3-size); font-weight: var(--h3-weight); line-height: var(--h3-lh); letter-spacing: var(--h3-tracking); }
+.h4, h4 { font-family: var(--font-display); font-size: var(--h4-size); font-weight: var(--h4-weight); line-height: var(--h4-lh); letter-spacing: var(--h4-tracking); }
+.h5, h5 { font-family: var(--font-display); font-size: var(--h5-size); font-weight: var(--h5-weight); line-height: var(--h5-lh); letter-spacing: var(--h5-tracking); }
+
+.p-l { font-size: var(--p-l-size); line-height: var(--p-l-lh); font-weight: 400; }
+.p-m { font-size: var(--p-m-size); line-height: var(--p-m-lh); font-weight: 400; }
+.p-s { font-size: var(--p-s-size); line-height: var(--p-s-lh); font-weight: 400; }
+.caption { font-size: var(--caption-size); line-height: var(--caption-lh); font-weight: 500; color: var(--fg-2); letter-spacing: 0.02em; }
+.kr { font-family: var(--font-kr); }
+.mono { font-family: var(--font-mono); }
